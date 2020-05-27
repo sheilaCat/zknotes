@@ -14,6 +14,10 @@ import {
 } from 'fs';
 import { formatDate } from './utils';
 
+import {languages} from 'vscode'
+import { linkCompletionProvider } from './linkCompletionProvider';
+import { zkDefinitionProvider } from './provideDefinition';
+import { zkFoldingRangeProvider } from './zkFoldingRangeProvider';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -70,6 +74,32 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(createNewNote)
 
+	/**
+	 * links 键入`[`时自动补全
+	 */
+	const linkAutocompletion = languages.registerCompletionItemProvider(
+    'markdown',
+    linkCompletionProvider,
+    '[',
+  );
+	context.subscriptions.push(linkAutocompletion);
+	
+
+	/**
+	 * wiki links 可跳转的链接
+	 */
+
+	const zettelLink = languages.registerDefinitionProvider(
+		'markdown',
+		zkDefinitionProvider
+	)
+	context.subscriptions.push(zettelLink)
+	
+	const zettelFold = languages.registerFoldingRangeProvider(
+		'markdown',
+		zkFoldingRangeProvider
+	)
+	context.subscriptions.push(zettelFold)
 }
 
 // this method is called when your extension is deactivated

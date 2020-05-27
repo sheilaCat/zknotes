@@ -1,0 +1,9 @@
+{
+  "scopeName": "text.html.markdown",
+  "patterns": [
+    {
+      "name": "markup.other.zk.link",
+      "match": "123"
+    }
+  ]
+}

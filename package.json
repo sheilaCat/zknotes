@@ -11,21 +11,32 @@
 	],
 	"activationEvents": [
 		"onCommand:zknotes.helloWorld",
-		"onCommand:zknotes.newNote"
+		"onCommand:zknotes.newNote",
+		"onLanguage:markdown"
 	],
 	"main": "./out/extension.js",
-	"configuration": {
-		"type": "object",
-		"title": "zknotes configuration",
-		"properties": {
-			"zknotes.defaultFormat": {
-				"type": "string",
-				"default": "yyyyMMddHHmm",
-				"description": "zk new note default format"
-			}
-		}
-	},
 	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "zknotes configuration",
+			"properties": {
+				"zknotes.defaultFormat": {
+					"type": "string",
+					"default": "yyyyMMddhhmm",
+					"description": "zk new note default format"
+				}
+			},
+			"grammars": [
+				{
+					"language": "markdown",
+					"scopeName": "text.html.markdown",
+					"path": "./src/syntaxes/markdown.tmLanguage.json",
+					"embeddedLanguages": {
+						"meta.embedded.block.frontmatter": "yaml"
+					}
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "zknotes.helloWorld",

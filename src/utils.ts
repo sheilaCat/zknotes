@@ -8,7 +8,7 @@ export function formatDate(date: Date, fmt: string | null) {
     's+': date.getSeconds(), //秒
     'q+': Math.floor((date.getMonth() + 3) / 3), //季度
     'S': date.getMilliseconds() //毫秒˝
-  };
+  } as any;
   if (!fmt) {
     fmt = 'yyyy-MM-dd hh:mm:ss';
   }
