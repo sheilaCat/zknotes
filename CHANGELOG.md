@@ -6,4 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.0.1] - 2020-06-16
+
+### Added
+- zk formatted headers / timestamp headers
+- wiki-links support

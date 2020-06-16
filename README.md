@@ -1,65 +1,44 @@
-# zknotes README
+# zknotes
 
-This is the README for your extension "zknotes". After writing up a brief description, we recommend including the following sections.
+English | [Simplified Chinese](/README_CN.md)
+
+`zknotes` is a vscode plugin for applying `zettelkasten` notation.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### New timestamp title based on zk formatting
 
-For example if there is an image subfolder under your extension project workspace:
+1. `Command + Shift + P/ ⇧⌘P / F1` Display Command Panel
 
-\!\[feature X\]\(images/feature-x.png\)
+2. Select ` new zk note`, enter your title and it will automatically generate a markdown file based on **yyyyMMddHHmm_yourtitle**.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![](images/2020-06-16_1.gif)
 
-## Requirements
+### Support wiki-links with `[[filename]]`.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+All zk files in the current directory are displayed when `[[` is entered, and jump to the corresponding file is supported.
 
-## Extension Settings
+The wiki-links of `[[]]` show all zk files in the current directory when you type `[[` and support jumping to the corresponding file. 
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![](images/2020-06-16_2.gif)
 
-For example:
+### Using vscode's peek definition F12 for block modifications
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+![](images/2020-06-16_3.gif)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
+First release of `zknotes`.
 
-Initial release of ...
+Feature 1: zk formatted headers / timestamp headers
 
-### 1.0.1
+Feature 2: wiki-links support
 
-Fixed issue #.
+## Roadmap
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- [x] timestamp title
+- [x] wiki-links
+- [ ] timestamp title add configuration
+- [ ] graph view

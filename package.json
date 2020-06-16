@@ -1,6 +1,7 @@
 {
 	"name": "zknotes",
 	"displayName": "zknotes",
+	"publisher": "sheilacat",
 	"description": "vscode plugin for zk",
 	"version": "0.0.1",
 	"engines": {
@@ -10,7 +11,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:zknotes.helloWorld",
 		"onCommand:zknotes.newNote",
 		"onLanguage:markdown"
 	],
@@ -38,10 +38,6 @@
 			]
 		},
 		"commands": [
-			{
-				"command": "zknotes.helloWorld",
-				"title": "Hello World"
-			},
 			{
 				"command": "zknotes.newNote",
 				"title": "new zk note"
