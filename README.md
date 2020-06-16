@@ -1,6 +1,8 @@
 # zknotes
 
-English | [Simplified Chinese](/README_CN.md)
+![](images/logo.png)
+
+English | [Simplified Chinese](README_CN.md)
 
 `zknotes` is a vscode plugin for applying `zettelkasten` notation.
 

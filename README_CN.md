@@ -1,6 +1,8 @@
 # zknotes
 
-[英文](/README.md) | 简体中文
+![](images/logo.png)
+
+[英文](README.md) | 简体中文
 
 `zknotes`是一款应用`zettelkasten`笔记法的vscode插件。
 

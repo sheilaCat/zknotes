@@ -2,7 +2,10 @@
 	"name": "zknotes",
 	"displayName": "zknotes",
 	"publisher": "sheilacat",
+	"keywords": ["zk", "zettel", "zettelkasten", "zknote", "zknotes", "markdown"],
 	"description": "vscode plugin for zk",
+	"icon": "images/logo.png",
+	"repository": "https://github.com/sheilaCat/zknotes",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.45.0"
