@@ -64,8 +64,10 @@ export function activate(context: vscode.ExtensionContext) {
 				value: filename,
 				prompt: 'confirm your note title'
 			}).then(fullFilename => {
-				writeFile(`${root}/${fullFilename}.md`, '', () => {
-					vscode.window.showInformationMessage('success!')
+				const rootFilename = `${root}/${fullFilename}.md`
+				writeFile(rootFilename,  `# ${filename}`, () => {	
+					// 写入1级标题后 打开该文件
+					vscode.window.showTextDocument(vscode.Uri.file(rootFilename))
 				})
 			})
 		})
