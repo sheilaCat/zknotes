@@ -13,7 +13,7 @@
   "description": "vscode plugin for zk",
   "icon": "images/logo.png",
   "repository": "https://github.com/sheilaCat/zknotes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.45.0"
   },
